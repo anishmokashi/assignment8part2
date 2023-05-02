@@ -1,0 +1,20 @@
+<h1>Sending message from app to child </h1>
+
+
+
+
+<app-child [parentData]="message"></app-child>
+
+<h1>Sending message from child to  app  </h1>
+<app-child (MyEvent)="msgfromchild=$event"></app-child>
+{{msgfromchild}}
+
+<!--- In this application we have let parent to communicate to child and child to parent 
+when child wants to communicate to parent then we have to use event emitter class and that event is generated when we click the button and data is send 
+to paret component
+
+
+parent to child communication is done through the normal event binding where[variable in thid box is of child component ]=" and variable in this double quotes is of parent
+component "    
+so basically we transfer the data from parent variable which is in .ts file to the child variable and we use @Input for child because it is going to take input from parent 
+-->
